@@ -6,6 +6,7 @@ package _01_random._2_rock_paper_scissors;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -80,7 +81,8 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         //   Don't forget to create a Random object.
 	    
         //2. Change the value of opponentSelection to be a random number between 0 and 2; 
-        int opponentSelection = 0;
+        Random Bot = new Random();
+    	int opponentSelection = Bot.nextInt(3);        
         
         //3. Run the program again. Is the result different?
  
@@ -92,8 +94,8 @@ public class RockPaperScissors extends JPanel implements ActionListener{
             selection = 2;
         }
         
-        JOptionPane.showMessageDialog(null, "You chose: " + convertSelection(selection) + ".\n"
-                    + "The computer chose: " + convertSelection(opponentSelection) + ".\n");
+        JOptionPane.showMessageDialog(null, "Player's Choice: " + convertSelection(selection) + "\n"
+                    + "Bot's Choice: " + convertSelection(opponentSelection) + "\n");
         
         if(selection == opponentSelection){
             JOptionPane.showMessageDialog(null, "No Winner.  Play again.");
@@ -102,17 +104,17 @@ public class RockPaperScissors extends JPanel implements ActionListener{
                  (selection == 2 && opponentSelection == 1)){
             JOptionPane.showMessageDialog(null, "You Win!");
         }else{
-            JOptionPane.showMessageDialog(null, "You Lose!");
+        	JOptionPane.showMessageDialog(null, "You Lose!");
         }
     }
     
     private String convertSelection(int s){
        if (s==0)
-            return "ROCK";
+            return "Rock";
        else if (s==1)
-            return "PAPER";
+            return "Paper";
        else if (s==2)
-            return "SCISSORS";
+            return "Scissors";
        else
             return "";
         }
