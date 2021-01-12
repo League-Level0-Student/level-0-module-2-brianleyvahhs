@@ -42,6 +42,6 @@ public class Magic8Ball {
     else if (randomNumber  == 3) {JOptionPane.showMessageDialog(null, "Ask Again Later");}
     
 	// -- write your own answer
-    else if (randomNumber  == 4) {JOptionPane.showMessageDialog(null, "Come Back LaterFor The Answer");}
+    else if (randomNumber  == 4) {JOptionPane.showMessageDialog(null, "Come Back Later For The Answer");}
 	}
 }
