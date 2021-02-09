@@ -16,7 +16,7 @@ public class AnimalFarm {
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-	boolean canPlaySounds = true;
+	boolean canPlaySounds = false;
 
 	
 	public static void main(String[] args) {
@@ -78,8 +78,8 @@ public class AnimalFarm {
 	ImageIcon cowIcon;
 	
 	private void showImage (ImageIcon icon) {
-//			JOptionPane.showMessageDialog(null, "", "You chose", 0, icon);
-			JOptionPane.showMessageDialog(null, "", "The Animal Of The Day Is ", AnName, 0, icon);
+			JOptionPane.showMessageDialog(null, "", "You chose", 0, icon);
+			//JOptionPane.showMessageDialog(null, "", "The Animal Of The Day Is ", Choice, 0, icon);
 	}
 	
 	private void playNoise(String soundFile) {
